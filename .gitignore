@@ -1,0 +1,6 @@
+# Generated files and dirs
+cmd/
+go.mod
+go.sum
+models/
+restapi/
