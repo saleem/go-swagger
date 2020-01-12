@@ -1,5 +1,14 @@
+swagger: "2.0"
+info:
+  title: Todo list
+  version: 1.0.0
+  description: Sample todo list app
 consumes:
 - application/com.thesaleem.examples.todo-list.v1+json
+produces:
+- application/com.thesaleem.examples.todo.list.v1+json
+schemes:
+- http
 definitions:
   error: 
     type: object
@@ -25,10 +34,6 @@ definitions:
         minLength: 1
       completed:
         type: boolean
-info:
-  description: Sample todo list app
-  title: Todo list
-  version: 1.0.0
 paths: 
   /:
     get:
@@ -55,8 +60,3 @@ paths:
           description: generic error response
           schema:
             $ref: "#/definitions/error"
-produces:
-- application/com.thesaleem.examples.todo.list.v1+json
-schemes:
-- http
-swagger: "2.0"
