@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/saleem/go-swagger.svg?branch=master)](https://travis-ci.org/saleem/go-swagger)
+
 # Readme
 
 This is my take on the ![Todo List tutorial](https://goswagger.io/tutorial/todo-list.html) at goswagger.com. 
@@ -25,7 +27,7 @@ swagger generate server -A todo-list -f ./swagger.yml
 ```
 This should print out a lot of stuff, ending with two missing packages that you need to get. 
 
-5. *OPTIONAL*: Get the missing packages, like this:
+5. Get the missing packages, like this:
 
 ```bash
  go get -u -f ./...
