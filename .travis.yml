@@ -11,5 +11,7 @@ script:
   - go install ./cmd/swagger
   # Print swagger version
   - swagger version
+  # Print current dir
+  - pwd
   # Validate swagger.yml
-  - swagger validate swagger.yml
+  # - swagger validate swagger.yml
