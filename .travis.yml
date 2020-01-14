@@ -12,4 +12,4 @@ script:
   # Print swagger version
   - swagger version
   # Validate swagger.yml
-  - swagger validate ./swagger.yml
+  - swagger validate swagger.yml
