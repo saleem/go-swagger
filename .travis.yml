@@ -4,8 +4,8 @@ go:
  - 1.13.4
 
 script:
-  download_url="https://github.com/go-swagger/go-swagger/releases/download/v0.21.0/swagger_linux_amd64"
-  echo "Downloading go-swagger from $download_url"
-  curl -o /usr/local/bin/swagger -L'#' "$download_url"
-  chmod +x /usr/local/bin/swagger
-  swagger validate ./swagger.yml
+  - download_url="https://github.com/go-swagger/go-swagger/releases/download/v0.21.0/swagger_linux_amd64"
+  - echo "Downloading go-swagger from $download_url"
+  - curl -o /usr/local/bin/swagger -L'#' "$download_url"
+  - chmod +x /usr/local/bin/swagger
+  - swagger validate ./swagger.yml
