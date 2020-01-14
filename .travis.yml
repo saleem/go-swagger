@@ -4,14 +4,18 @@ go:
  - 1.13.4
 
 script:
+  # Save src dir
+  - src_dir=$(pwd)
   # Install go-docker
-  - dir=$(mktemp -d) 
-  - git clone https://github.com/go-swagger/go-swagger "$dir" 
-  - cd "$dir"
+  - temp_dir=$(mktemp -d)
+  - git clone https://github.com/go-swagger/go-swagger "$temp_dir"
+  - cd "$temp_dir"
   - go install ./cmd/swagger
   # Print swagger version
   - swagger version
+  # Switch to src dir
+  - cd "$src_dir"
   # Print current dir
   - pwd
   # Validate swagger.yml
-  # - swagger validate swagger.yml
+  - swagger validate swagger.yml
