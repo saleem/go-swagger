@@ -19,3 +19,11 @@ script:
   - pwd
   # Validate swagger.yml
   - swagger validate swagger.yml
+  # generate swagger server
+  - swagger generate server -A TodoList -f ./swagger.yml
+  # install swagger server
+  - go install ./cmd/todo-list-server/
+  # run installed swagger server
+  - $GOPATH/bin/todo-list-server --port=8080 &
+  # verify that the server responds
+  - curl -i http://127.0.0.1:8080
