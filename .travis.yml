@@ -22,7 +22,7 @@ script:
   # generate swagger server
   - swagger generate server -A TodoList -f ./swagger.yml
   # install missing packages
-  - go get -u -f
+  - go get -u -f ./...
   # install swagger server
   - go install ./cmd/todo-list-server/
   # run installed swagger server
